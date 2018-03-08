@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         public static MySingleton getInstance(Context context) {
             if (instance == null) {
+                // context của activity hiện tại bị giữ.
+//                instance = new MySingleton(context);
+                //context.getApplicationContext() => context of App.
                 instance = new MySingleton(context.getApplicationContext());
             }
             return instance;
